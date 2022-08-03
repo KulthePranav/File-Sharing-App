@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+<section class="container">
+    <img class="image_icon" src="/img/file-download-icon.png" alt="File icon">
+    <% if(locals.error){ %>
+        <h4><%=locals.error %></h4>
+    <%}
+    else{ %>
+        <h2>Your file is ready to download</h2>
+        <P>Link expires in 24 hours</P>
+        <div class="download_meta">
+            <h4><%= filename %></h4>
+            <small><%=parseInt(filesize/1000) %> KB</small>
+        </div>
+        <div class="btn btn-primary">
+            <a class="button text-white" href="<%=download %>">Download File</a>
+        </div>
+   <% }%>
+    
+</section>
+</body>
+</html>
