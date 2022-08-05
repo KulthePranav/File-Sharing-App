@@ -10,7 +10,7 @@ app.use(express.json());
 connectDB();
 //Cors
 const corsOptions = {
-   origin: process.env.ALLOWED_CLIENTS.split(',')
+   origin: 'http://localhost:8080'
 }
 app.use(cors(corsOptions));
 //Template Engine
