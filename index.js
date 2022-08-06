@@ -12,7 +12,7 @@ browseBtn.addEventListener("click",()=>{
 const uploadFile = ()=>{
     const file = fileInput.files[0];
     const formData = new FormData()
-    formData.append("mfiles",file)
+    formData.append("myfiles",file)
 
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = ()=>{
