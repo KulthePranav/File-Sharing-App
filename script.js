@@ -1,4 +1,4 @@
-const File =  require('./models/file');
+/*const File =  require('./models/file');
 const fs = require('fs');
 const connectDB = require('./config/db');
 connectDB();
@@ -21,4 +21,4 @@ async function deleteData(){
         console.log(`Job done`);
     }
 }
-deleteData().then(process.exit);
+deleteData().then(process.exit);*/
