@@ -35,3 +35,114 @@ body{
     color: blue;
     cursor: pointer;
 }
+
+.progress-container{
+    width: 700px;
+    height: 70px;
+    border-radius: 15px;
+    border: 1px solid blue;
+    margin: 20px; 
+    position: relative;
+    display: none;
+}
+.progress-container .bg-progress{
+    background-color: #f5fcff;
+    width:100%;
+    height:70.5px;
+    border-radius: 15px;
+    position: absolute;
+}
+.progress-container .inner-container{
+    position: absolute;
+    z-index: 1;
+    margin: 10px 15px ;
+    width : calc(100% - 30px);
+}
+.progress-bar{
+    height: 3px;
+    width: 100%;
+    margin-top: 5px;
+    background: blue;
+    transform-origin:left;
+    transform : scaleX(0);
+    transition: transform .25s linear;
+    position: absolute;
+}
+.sharing-container{
+    width: 700px;
+    margin-bottom: 10px;
+    display : none;
+}
+
+.sharing-container .input-container{
+    position: relative;
+}
+
+.input-container img{
+    position : absolute;
+    left: 680px;
+    bottom: 30px;
+    cursor : pointer;
+}
+.sharing-container .input-container input{
+    width: 700px;
+    border: 2px dashed blue;
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 6px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background: #f5fcff;
+}
+
+p{
+    text-align: center;
+    font-size: 25px;
+}
+
+.email-container{
+    width : 740px;
+    display : flex;
+    align-items: center;
+}
+
+.email-container form{
+    width : 100%;
+    border: 2px dashed blue;
+    border-radius: 10px;
+    padding: 15px 0px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.email-container .field{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom : 5px;
+    width: 400px;
+}
+.email-container label{
+    font-size: 18px;
+}
+
+.email-container input{
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid blue;
+    text-align: center;
+}
+.email-container input:focus{
+    outline: none;
+}
+.email-container button{
+    font-size: 18px;
+    padding: 8px 40px;
+    margin-top: 15px;
+    background: #aec9f1;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

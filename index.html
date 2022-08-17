@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
+
 <body>
-   
-   <div class="container">
-    <div class="box">
-        <div class="image">
-           <img src="file-upload-icon.png" alt="File icon">
+
+    <div class="container">
+        <div class="box">
+            <div class="image">
+                <img src="file-upload-icon.png" alt="File icon">
+            </div>
+            <input type=file id="fileInput">
+            <div class="text">Drop your files here or, <span class="browseBtn">browse</span></div>
         </div>
-        <input type=file id="fileInput">
-        <div class="text">Drop your files here or, <span class="browseBtn">browse</span></div>
+        <div class="progress-container">
+            <div class="bg-progress"></div>
+            <div class="inner-container">
+                <div class="title"><b>Uploading...</b></div>
+                <div class="percent-container">
+                    <span id="percent">0</span>%
+                </div>
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+        <div class="sharing-container">
+            <div class="input-container">
+                <input type="text" id="fileURL" readonly>
+                <img src="./copy_icon.svg" id = "copyBtn" alt="copy icon">
+            </div>
+            <p>Or send via Email</p>
+            <div class="email-container">
+                <form>
+                    <div class="field">
+                        <label for="sender">Your Email</label>
+                        <input type="email" required name="from-email" id="sender">
+                    </div>
+                    <div class="field">
+                        <label for="receiver">Receiver's Email</label>
+                        <input type="email" required name="to-email" id="receiver">
+                    </div>
+                    <button>Send</button>
+                </form>
+            </div>
+        </div>
     </div>
-   </div> 
-   <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
